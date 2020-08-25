@@ -33,7 +33,7 @@ ServiceNow.getTableData(fields,filters,'incident',function(res){
     return res
 }).then((result)=>{
 	result.data.map(wordObj => {
-		agent.add(wordObj.number);
+		agent.add(wordObj[0].number);
 	});
 			});
 }
