@@ -1,0 +1,26 @@
+{
+  "name": "chatbot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "actions-on-google": "2.12.0",
+    "axios": "^0.19.2",
+    "dialogflow": "1.2.0",
+    "dialogflow-fulfillment": "0.5.0",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "firebase-admin": "5.13.1",
+    "firebase-functions": "3.6.1",
+    "googleapis": "^49.0.0",
+    "resolve": "^1.17.0",
+    "servicenow-rest-api": "^1.1.1",
+    "superagent": "^5.2.2"
+  },
+  "author": "",
+  "license": "ISC"
+}
