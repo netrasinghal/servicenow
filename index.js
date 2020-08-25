@@ -33,7 +33,9 @@ ServiceNow.getTableData(fields,filters,'incident',function(res){
     return res
 }).then((result)=>{
 	result.data.map(wordObj => {
-		agent.add(wordObj[0].number);
+		if('INC0010002' == wordObj.number){
+		agent.add(wordObj.number);
+		}
 	});
 			});
 }
