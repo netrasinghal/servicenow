@@ -30,9 +30,12 @@ const filters=[
 ];
 
 ServiceNow.getTableData(fields,filters,'incident',function(res){
-    console.log(res);
-agent.add(res);
-});
+    return res
+}).then((result)=>{
+	result.data.map(wordObj => {
+		agent.add(wordObj.number);
+	});
+			});
 }
 let intentMap = new Map();
   intentMap.set(ABOUT, aboutHandler);
