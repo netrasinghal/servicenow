@@ -26,8 +26,12 @@ const filters=[
 ];
 
 ServiceNow.getTableData(fields,filters,'incident',function(result){
+var msg=[];
+for(var i in result){
+msg.push(result[i].number)
+}
  return res.json({
-                fulfillmentText: result,
+                fulfillmentText: msg,
                 source: 'chatbot'
             })
 });
