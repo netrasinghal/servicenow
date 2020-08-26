@@ -39,7 +39,7 @@ msg.push(result[i].number)
             [
               {
                 "type": "description",
-                "title": "The tickets for caller are: "+msg.toString(),
+                "title": "The tickets for this caller are: "+msg.toString(),
                 "text": [
                   "Please select the next action from the below options"
                 ]
