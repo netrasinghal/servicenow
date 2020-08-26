@@ -32,7 +32,44 @@ msg.push(result[i].number)
 }
 
  return res.json({
-                fulfillmentText: msg.toString(),
+                fulfillmentMessages: [
+      {
+        "payload": {
+          "richContent": [
+            [
+              {
+                "type": "description",
+                "title": "Next action",
+                "text": [
+                  "Select from the below options"
+                ]
+              },
+              {
+                "type": "chips",
+                "options": [
+                  {
+                    "text": "Get details for a incident",
+                    "link": ""
+                  },
+                  {
+                    "link": "",
+                    "text": "Create ticket"
+                  },
+                  {
+                    "link": "",
+                    "text": "Update ticket"
+                  },
+                  {
+                    "text": "Delete ticket",
+                    "link": ""
+                  }
+                ]
+              }
+            ]
+          ]
+        }
+      }
+    ],
                 source: 'chatbot'
             })
 });
