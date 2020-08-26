@@ -31,7 +31,7 @@ for(var i in result){
 msg.push(result[i].number)
 }
  return res.json({
-                fulfillmentText: msg,
+                fulfillmentText: msg[0],
                 source: 'chatbot'
             })
 });
