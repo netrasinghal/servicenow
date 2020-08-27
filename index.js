@@ -17,6 +17,7 @@ app.post('/chatbot',(req,res) =>{
  const intent = req.body.queryResult.intent.displayName;
 
 if(intent=="getdetails"){
+	let callerid = req.body.queryResult.parameters.callerid;
 	ServiceNow.Authenticate();
 	const fields=[
 	    'number',
